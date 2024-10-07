@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Classics</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body style="font-family: 'Space Grotesk', sans-serif;">
+    <!-- Header Section -->
+    <header id="home" class="relative h-screen bg-cover bg-center">
+        <nav class="bg-white shadow-lg fixed w-full z-10 top-0">
+            <div class=" flex justify-center items-center py-4">
+                <div class="text-2xl font-bold text-gray-800 float-in">
+                    <i class="fas fa-cut"></i>Henry Classics
+                </div>
+            </div>
+        </nav>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 flex justify-center items-center h-full">
+            <h1 class="text-4xl md:text-6xl font-bold text-white float-in">Welcome to Henry Classics</h1>
+        </div>
+    </header>
+
+    <!-- Category Cards Section -->
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center ">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">
+            Book an Appointment
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white shadow-lg rounded-lg p-4 cursor-pointer float-right" onclick="showStyles('agbada')">
+                <img src="./img/big-shoe1.png" alt="Agbada" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-lg font-bold mt-2">Agbada</h2>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 cursor-pointer float-right"
+                onclick="showStyles('native-wear')">
+                <img src="./img/big-shoe1.png" alt="Up and Down Native Wears"
+                    class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-lg font-bold mt-2">Up and Down Native Wears</h2>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-4 cursor-pointer float-right" onclick="showStyles('shirts')">
+                <img src="./img/big-shoe1.png" alt="Shirts" class="w-full h-48 object-cover rounded-lg">
+                <h2 class="text-lg font-bold mt-2">Shirts</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Style Sections (Hidden Initially) -->
+    <div id="styles-container" class="text-center">
+        <div id="agbada" class="hidden py-8 ">
+            <h2 class="text-2xl font-bold mb-4">Agbada Styles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe1.png" alt="Agbada Style 1" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Agbada Style 1</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe1.png" alt="Agbada Style 2" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Agbada Style 2</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe1.png" alt="Agbada Style 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Agbada Style 3</h3>
+                </div>
+                <!-- Add more styles as needed -->
+            </div>
+        </div>
+
+        <div id="native-wear" class="hidden py-8 ">
+            <h2 class="text-2xl font-bold mb-4">Up and Down Native Wear Styles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe1.png" alt="Native Wear Style 1"
+                        class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Native Wear Style 1</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe2.png" alt="Native Wear Style 2"
+                        class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Native Wear Style 2</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="./img/big-shoe3.png" alt="Native Wear Style 3"
+                        class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Native Wear Style 3</h3>
+                </div>
+                <!-- Add more styles as needed -->
+            </div>
+        </div>
+
+        <div id="shirts" class="hidden py-8">
+            <h2 class="text-2xl font-bold mb-4">Shirt Styles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="path-to-shirt-style1.jpg" alt="Shirt Style 1" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Shirt Style 1</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="path-to-shirt-style2.jpg" alt="Shirt Style 2" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Shirt Style 2</h3>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <img src="path-to-shirt-style3.jpg" alt="Shirt Style 3" class="w-full h-48 object-cover rounded-lg">
+                    <h3 class="text-lg font-bold mt-2">Shirt Style 3</h3>
+                </div>
+                <!-- Add more styles as needed -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Button to trigger fade-in -->
+    <button id="show-appointment" class="block mx-auto mt-8 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+       Book an Appointment
+    </button>
+    <!--appointment section-->
+    <section id="appointment" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                Book an Appointment
+            </h2>
+            <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
+                <div class="grid grid-cols-1 gap-6">
+                    <!--name field-->
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name"
+                            class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
+                            placeholder="Enter your full name">
+                    </div>
+                    <!--email-->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="text" id="email" name="email"
+                            class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
+                            placeholder="Enter your email here">
+                    </div>
+                    <!--phone number-->
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                            class="mt-1 block w-full px-4 py-2 border rounded-md text-gray-900"
+                            placeholder="Enter your phone number here">
+                    </div>
+                    <!--calendar for booking-->
+                    <div class="mb-4">
+                        <label for="appointment-date" class="block text-sm font-medium text-gray-700 mb-2">Choose
+                            Appointment
+                            Date and Time</label>
+                        <input id="appointment-date" name="appointment-date" type="text"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900 focus:ring-2 focus:ring-blue-900 focus:outline-none"
+                            placeholder="Pick date and time">
+                    </div>
+                    <!--booking details-->
+                    <div>
+                        <label for="details" class="block text-sm font-medium text-gray-700">Appointment Details</label>
+                        <textarea name="details" id="details"
+                            class="mt-1 block w-full px-4 py-4 border rounded-md text-gray-900" rows="4"
+                            placeholder="Details about your appointment..."></textarea>
+                    </div>
+                    <!--submit button-->
+
+                    <div>
+                        <button type="submit"
+                            class="w-full bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-blue-700">Submit
+                            Appointment
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        // Initialize Flatpickr to display date and time picker
+        flatpickr("#appointment-date", {
+            enableTime: true,           // Enable time selection
+            dateFormat: "m/d/Y h:i K",  // 12-hour time format with AM/PM
+            time_24hr: false,           // Ensure 12-hour format
+            minDate: "today"            // Prevent selecting past dates
+        });
+    </script>
+</body>
+
+</html>
