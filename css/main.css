@@ -29,10 +29,37 @@
 
 /* Custom CSS for non-Tailwind-specific styles */
 #appointment {
+    display: none; /* Hides the element by default */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
 #appointment.fade-in {
+    display: block; /* Makes the element visible */
     opacity: 1;
+}
+
+/*fad-in for services*/
+
+#services{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#services.fade-in{
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Footer fade-in effect */
+footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+footer.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -39,7 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show appointment section and hide the button
     showAppointmentBtn.addEventListener('click', () => {
-        appointmentSection.classList.add('fade-in');
+        // Make the section visible before triggering the fade-in effect
+        appointmentSection.style.display = 'block';
+
+        // Allow a tiny delay to ensure the display is set before the fade-in transition starts
+        setTimeout(() => {
+            appointmentSection.classList.add('fade-in');
+        }, 10);
+
         showAppointmentBtn.style.display = 'none';  // Hide the button after it's clicked
     });
 
@@ -59,3 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     });
 });
+
+
+// JavaScript to fade in the Footer section when in view
+document.addEventListener('scroll', () => {
+    const footer = document.querySelector('footer');
+    const footerPosition = footer.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (footerPosition < screenPosition) {
+        footer.classList.add('fade-in');
+    }
+});
+
+//JavaScript to fade in the services section when in view
+
+document.addEventListener('scroll', () => {
+    const servicesSection = document.getElementById('services');
+    const servicesPosition = servicesSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (servicesPosition < screenPosition) {
+        servicesSection.classList.add('fade-in');
+    }
+});
+
+
